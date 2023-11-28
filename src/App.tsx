@@ -3,6 +3,8 @@ import Cita from "./features/quote/Cita";
 import "./App.css";
 import Bio from "./features/bio/Bio";
 import Noticias from "./features/news/Noticias";
+import { noticiasService } from "./features/news/noticiasService";
+
 
 function App() {
   return (
@@ -19,7 +21,7 @@ function App() {
         <Bio />
       </section>
       <section className="App-news">
-        <Noticias />
+        <Noticias noticiasService ={noticiasService} />
       </section>
     </div>
   );

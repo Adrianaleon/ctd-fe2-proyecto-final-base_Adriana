@@ -6,6 +6,8 @@ import {
   MargeImage,
 } from "../../assets";
 
+
+
 export enum NombresSimpsons {
   BART = "BART",
   LISA = "LISA",
@@ -64,4 +66,5 @@ export const INFO_SIMPSONS = {
     madre de televisión y a menudo se incluye en las listas de las mejores "mamá de televisión".`,
     image: MargeImage,
   },
+  
 };
