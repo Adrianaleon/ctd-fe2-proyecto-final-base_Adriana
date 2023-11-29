@@ -3,14 +3,24 @@ import { NombresSimpsons, INFO_SIMPSONS } from "./constants";
 import styles from "./styles.module.css";
 import { BotonBio } from "./bioStyle";
 
+/**
+ * Componente funcional que muestra la biografía de los personajes de los Simpsons
+ */
+
 const Bio : React.FC = () => {
+   // Estado para controlar la información a mostrar
   const [bioActiva, setBioActiva] = useState(
     INFO_SIMPSONS[NombresSimpsons.BART]
   );
-
+/**
+   * Función que actualiza el estado con la información del personaje seleccionado
+   * @param {NombresSimpsons} nombre - Nombre del personaje seleccionado
+   */
   const onClick: (nombre: NombresSimpsons) => void = (nombre) =>
     setBioActiva(INFO_SIMPSONS[nombre]);
-
+  /**
+   * Crea los botones para seleccionar el personaje
+   */
   const crearBotones = () => {
     return Object.keys(INFO_SIMPSONS).map((nombre: string) => (
       <BotonBio

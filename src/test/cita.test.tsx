@@ -67,13 +67,13 @@ describe('Test <Cita />', () => {
     
     });  
     
-    test('Mostrar mensaje de error al hacer clic en "Obtener Cita"con nombre vacio', async()=>{
+    test('Mostrar mensaje de error al hacer clic en "Obtener Cita"con nombre dato numerico', async()=>{
 
       render(<Cita/>)
       const input = screen.getByPlaceholderText(/Ingresa el nombre del autor/i);
       const obtenerCitaButton = screen.getByRole("button", { name: /Obtener cita aleatoria/i });
   
-      fireEvent.change(input, {target:{value: "Nombre vacio"}});
+      fireEvent.change(input, {target:{value: "1234"}});
       fireEvent.click(obtenerCitaButton)
   
       await waitFor(()=> {
